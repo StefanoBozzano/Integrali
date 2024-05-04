@@ -32,12 +32,15 @@ FILE* OpenFile(char* filePath) {
 */
 int CloseFile(FILE* fPtr) {
 		
-	if (fPtr != NULL)	
+	if (fPtr != NULL) {	
       if (fclose(fPtr) != 0) {
 		  printf("\n CloseFile - ");
           printf("Error closing file \n");
           return -1;
 	  }
+	  else 
+		  return 1;
+	}
 
 	return 1;
 		
